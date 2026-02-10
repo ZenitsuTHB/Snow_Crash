@@ -37,7 +37,7 @@ Hipotesis :
 solo letras, todas válidas, pero sin sentido
 probable cifrado por sustitución o desplazamiento. Cifrado Cesar ROT.
 
-BASHCODE TO ROT Decipher (Brute force on Ceasar)
+## BASHCODE TO ROT Decipher (Brute force on Ceasar)
 for i in {1..25};  → Crea una variable i que se irá cambiando de valor del 1 al 25.
 do, done → Marcan dónde empieza y termina el bloque de comando que se ejecutará en cada vuelta.
 echo -n “ROT$i:  ”; → Imprime por pantalla en qué numero de rotación estamos.
@@ -47,6 +47,8 @@ printf  ‘\\%03o’ → Convierte los números a formato octal para que lo enti
 printf  %b → Toma estos códigos octales y los convierte de nuevo a letras creando dinámicamente la cadena a-z.
 seq $((947 + i))  122 → Empieza el alfabeto en la letra desplazada, si i = 3, empieza en 100 (d) hasta 122 (z).
 seq  97 $((96 + 1)) → Genera las letras que quedaron atrás para ponerlas al final, si i = 3,  genera de la 97 (a) a la 99 (c).
+
+
 Resultado seria, con i = 3 : defghijklmnopqrstuvwxyzabc
 
 
